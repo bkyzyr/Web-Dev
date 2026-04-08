@@ -1,0 +1,12 @@
+<div class="head">
+  <p *ngFor="let cg of categories" (click)="selectCategory(cg.id)" [class.active]="cg.id === selectedCategoryId">
+    {{ cg.name }}
+  </p>
+</div>
+<p *ngIf="!selectedCategoryId" class="welcome">
+  Hello! <br>Select a category to see products.
+</p>
+
+
+<app-product-list  *ngIf="selectedCategoryId" [products]="filteredProducts" (remove)="removeProduct($event)">
+</app-product-list>

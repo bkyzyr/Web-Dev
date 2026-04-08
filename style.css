@@ -1,0 +1,19 @@
+p{
+    color: blueviolet;
+    font-style: italic;
+    text-align:center;
+}
+.div{
+    width: 100px;
+    height: 100px;
+    background-color: aquamarine;
+    float: left;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid ;
+    display: block;
+    display:inline flow-root;
+    display: none;
+    display: flex;
+    display: grid;
+}

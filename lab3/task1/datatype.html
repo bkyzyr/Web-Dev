@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <script>
+            let n = 123;
+            n = 12.345;
+            alert( "not a number" / 2 );//NaN represents a computational error
+            console.log(9007199254740991 + 1); // 9007199254740992
+            console.log(9007199254740991 + 2); // 9007199254740992
+            const bigInt = 1234567890123456789012345678901234567890n;//n in the end means its a bigint
+
+            // embed a variable
+            alert( `Hello, ${name}!` ); // Hello, John!
+            // embed an expression
+            alert( `the result is ${1 + 2}` ); // the result is 3
+            let isGreater = 4 > 1;
+            alert( isGreater ); // true (the comparison result is "yes")
+            let name = "Ilya";
+
+            alert( `hello ${1}` ); // ?
+            alert( `hello ${"name"}` ); // ?
+            alert( `hello ${name}` ); // ?
+        </script>
+    </body>
+</html>

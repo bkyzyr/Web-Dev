@@ -1,0 +1,40 @@
+<div class="card">
+
+    <div class="img-w">
+        <img class="img" [src]="getMainImage()" />
+    </div>
+
+    <div class="thumbs">
+        <img *ngFor="let img of product.images"
+             [src]="img"
+             (click)="selectImage(img)"
+             [class.active]="getMainImage() === img" />
+    </div>
+
+    <div class="text">
+        <h3>{{product.name}}</h3>
+
+        <div class="price-like">
+            <h4>{{ product.price }} ₸</h4>
+            <button class="like" (click)="incrementLike()">❤️ {{product.likes}}</button>
+            <span class="like-count">{{product.likes}}</span>
+        </div>
+
+        <p>{{product.description}}</p>
+    </div>
+
+    <div class="d">
+    <button class="kaspi">
+        <a [href]="product.link" target="_blank">Open in Kaspi</a>
+    </button>
+    <button class="delete" (click)="deleteProduct()">Delete</button>
+    </div>
+
+    <p class="share">Share:</p>
+
+    <div class="links">
+        <button class="wh" type="button" (click)="shareWhatsapp()">WhatsApp</button>
+        <button class="tg" type="button" (click)="shareTelegram()">Telegram</button>
+    </div>
+
+</div>

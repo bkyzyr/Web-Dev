@@ -1,0 +1,32 @@
+<div class="card">
+
+  <img class="main-image" [src]="selectedImage">
+
+  <div class="thumbnails">
+    <img *ngFor="let img of product.images" [src]="img" (click)="selectImage(img)">
+  </div>
+  <div class="text">
+    <h3>{{ product.name }}</h3>
+
+    <p class="description">
+      {{ product.description }}
+    </p>
+
+    <p class="price">{{ product.price }}</p>
+    <p class="rate"><span class="rating">{{ product.rating }}</span><i class="fa-solid fa-star" style="color: rgba(255, 212, 59, 1);" *ngFor="let star of amountStar(product.rating)"> </i></p>
+    <a class="kaspi-btn"
+      [href]="product.link"
+      target="_blank">
+      Open on Kaspi
+    </a>
+
+
+    <p class="share-text">Поделиться:</p>
+
+    <div class="share-buttons">
+      <button (click)="shareTelegram()">Telegram</button>
+      <button (click)="shareWhatsApp()">WhatsApp</button>
+    </div>
+  </div>
+</div>
+

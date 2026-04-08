@@ -1,0 +1,89 @@
+.card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: white;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1f);
+}
+
+.main-image {
+  width: 100%;
+  max-width: 250px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+
+.thumbnails img {
+  width: 50px;
+  height: 50px;
+  margin: 4px;
+  cursor: pointer;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.description {
+  font-size: 14px;
+  color: gray;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 8px 0;
+}
+
+.share-buttons button {
+  margin: 5px;
+  padding: 8px 14px;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.share-buttons button:first-child {
+  background-color: #0088cc;
+}
+
+.share-buttons button:first-child:hover {
+  background-color: #0077b5;
+}
+
+.share-buttons button:last-child {
+  background-color: #25D366;
+}
+
+.share-buttons button:last-child:hover {
+  background-color: #1ebe5d;
+}
+
+.kaspi-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 18px;
+  background-color: #E60012;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.kaspi-btn:hover {
+  background-color: #c40010;
+  transform: scale(1.05);
+}
